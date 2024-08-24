@@ -4,7 +4,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 const Navbar = () => {
   return (
     <nav className="bg-white">
-      <div className="max-w-[85rem] mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="py-4 flex items-center justify-between">
           <div className="flex items-center gap-8 text-[#191919]">
             <p>AIC</p>
