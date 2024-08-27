@@ -158,6 +158,48 @@ Dengan pemrograman iOS, Anda dapat mengintegrasikan berbagai layanan Apple seper
 Mengembangkan aplikasi iOS memerlukan pemahaman tentang pengelolaan sumber daya aplikasi untuk memastikan aplikasi berjalan dengan efisien dan stabil.
 Swift menawarkan fitur-fitur seperti error handling yang memudahkan penanganan kesalahan dan meningkatkan keandalan aplikasi iOS Anda.
 Pemrograman iOS juga mencakup pembuatan aplikasi yang dapat berjalan di berbagai perangkat seperti iPhone, iPad, dan Apple Watch dengan menggunakan WatchKit.
+Pemrograman iOS memungkinkan pengembangan aplikasi untuk iPhone dan iPad dengan menggunakan bahasa Swift atau Objective-C.
+Swift adalah bahasa pemrograman modern yang digunakan untuk mengembangkan aplikasi iOS dengan sintaks yang lebih bersih dan aman.
+Xcode adalah IDE resmi dari Apple untuk pengembangan aplikasi iOS, menyediakan alat untuk desain, pengujian, dan debugging aplikasi.
+Cocoa Touch adalah framework yang menyediakan pustaka dan komponen untuk membangun antarmuka pengguna pada aplikasi iOS.
+Auto Layout memudahkan pembuatan antarmuka pengguna yang responsif dan fleksibel dengan mendukung berbagai ukuran layar dan orientasi perangkat.
+SwiftUI adalah framework deklaratif yang memungkinkan pembuatan antarmuka pengguna dengan kode yang lebih intuitif dan sederhana.
+Core Data adalah framework yang digunakan untuk mengelola model data dan penyimpanan lokal pada aplikasi iOS.
+ARKit memungkinkan pengembangan aplikasi augmented reality yang dapat menggabungkan dunia digital dengan dunia nyata.
+UIKit adalah framework yang menyediakan alat untuk membangun antarmuka pengguna berbasis view controller dan tampilan.
+In-App Purchases (IAP) memungkinkan pengembang untuk menambahkan fitur pembelian dalam aplikasi iOS.
+Push Notifications dapat digunakan untuk mengirim pembaruan atau informasi penting kepada pengguna aplikasi iOS secara real-time.
+Core Location menyediakan API untuk mengakses informasi lokasi perangkat dan mengimplementasikan fitur berbasis lokasi dalam aplikasi.
+HealthKit memungkinkan aplikasi iOS untuk mengakses dan berbagi data kesehatan pengguna dengan izin yang sesuai.
+MapKit memungkinkan integrasi peta dan fitur berbasis lokasi dalam aplikasi iOS.
+Combine adalah framework yang memungkinkan pengembangan aplikasi reaktif dengan menggunakan aliran data dan penerbit.
+Core ML memungkinkan integrasi model machine learning dalam aplikasi iOS untuk fitur-fitur seperti pengenalan gambar dan teks.
+Speech Framework memungkinkan konversi suara menjadi teks dan integrasi pengenalan suara dalam aplikasi iOS.
+Metal adalah framework grafis untuk pemrograman grafis tingkat rendah dan performa tinggi pada aplikasi iOS.
+Local Authentication framework memungkinkan aplikasi untuk menggunakan biometrik seperti Face ID dan Touch ID untuk otentikasi pengguna.
+CloudKit memungkinkan integrasi penyimpanan dan sinkronisasi data dengan iCloud dalam aplikasi iOS.
+TestFlight adalah alat untuk distribusi beta aplikasi iOS yang memungkinkan pengujian aplikasi oleh pengguna sebelum peluncuran resmi.
+SpriteKit adalah framework untuk pengembangan game 2D dengan fitur-fitur grafis dan animasi yang canggih.
+SceneKit adalah framework untuk pengembangan game 3D dengan alat dan pustaka untuk rendering grafis dan animasi.
+Accessibility API membantu dalam pengembangan aplikasi iOS yang dapat diakses oleh pengguna dengan berbagai kebutuhan khusus.
+Network Framework menyediakan API untuk melakukan operasi jaringan yang lebih efisien dalam aplikasi iOS.
+Core Animation memungkinkan pembuatan animasi yang halus dan performa tinggi dalam antarmuka pengguna aplikasi iOS.
+Widgets memungkinkan pengembangan komponen antarmuka pengguna yang dapat ditempatkan di layar beranda iOS untuk akses cepat.
+Safari Services API memungkinkan integrasi fitur browser Safari dalam aplikasi iOS untuk pengalaman pengguna yang lebih baik.
+Core Bluetooth memungkinkan aplikasi iOS untuk berkomunikasi dengan perangkat Bluetooth dan mengimplementasikan fitur-fitur berbasis Bluetooth.
+Vision Framework memungkinkan pemrosesan gambar dan video dengan fitur-fitur seperti deteksi wajah dan pemindai barcode.
+Core NFC memungkinkan aplikasi iOS untuk membaca tag NFC dan mengimplementasikan fitur berbasis NFC.
+Document Picker API memudahkan pengguna untuk memilih dan mengakses file dari aplikasi iOS lainnya.
+App Extensions memungkinkan aplikasi iOS untuk menyediakan fungsi tambahan yang dapat digunakan di luar aplikasi utama.
+Multipeer Connectivity Framework memungkinkan komunikasi dan berbagi data antar perangkat iOS secara langsung tanpa memerlukan jaringan internet.
+Metal Performance Shaders menyediakan pustaka untuk pemrosesan grafis dan komputasi yang lebih efisien menggunakan Metal.
+Swift Playgrounds adalah lingkungan pengembangan interaktif untuk belajar dan eksperimen dengan bahasa Swift.
+Notification Content Extension memungkinkan penyesuaian tampilan notifikasi dalam aplikasi iOS dengan menambahkan konten yang dinamis.
+EventKit memungkinkan aplikasi iOS untuk mengakses dan mengelola data kalender dan pengingat pengguna.
+Photos Framework memungkinkan akses dan manajemen foto serta video dalam galeri pengguna dari aplikasi iOS.
+CocoaPods adalah alat untuk mengelola dependensi pustaka dalam proyek iOS, mempermudah integrasi pustaka pihak ketiga.
+Fastlane adalah alat otomatisasi untuk proses build, deployment, dan distribusi aplikasi iOS.
+Swift Package Manager memungkinkan pengelolaan dan distribusi pustaka Swift dengan lebih mudah dalam proyek iOS.
 Dengan Xcode, Anda dapat menggunakan Interface Builder untuk mendesain antarmuka pengguna secara visual, mempermudah proses pengembangan aplikasi iOS.
 Menggunakan framework Combine dalam pemrograman iOS memungkinkan Anda untuk menangani aliran data dan event dengan cara reaktif dan modern.
 Pengembangan iOS memerlukan keterampilan dalam menggunakan alat debugging untuk mengidentifikasi dan memperbaiki masalah dalam aplikasi Anda.
