@@ -27,14 +27,17 @@ const LearningPathPage = () => {
       <header>
         <Navbar />
       </header>
-      <div className=" min-h-[80vh] flex items-center justify-center">
+      <div className=" min-h-[80vh] flex items-center justify-center bg-class-tertiary">
         <div className="max-w-6xl mx-auto mt-10">
           <div className="flex flex-col gap-10 items-center">
             <div className="flex flex-col gap-2 items-center">
               <p className="text-5xl font-bold">
-                Generate Your <span className="font-extrabold">Path</span>
+                Generate Your{" "}
+                <span className="font-extrabold text-class-quaternary">
+                  Path
+                </span>
               </p>
-              <p className="max-w-xl text-class-secondary">
+              <p className="max-w-xl text-class-primary">
                 Enter a topic and let the AI generate a roadmap for you
               </p>
             </div>

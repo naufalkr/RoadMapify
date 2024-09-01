@@ -12,25 +12,19 @@ export const ReviewCard = ({
   body: string;
 }) => {
   return (
-    <figure
-      className={cn(
-        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-      )}
-    >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+    <figure className={cn("relative w-64 cursor-default overflow-hidden p-4 ")}>
+      <blockquote className="mt-2 text-sm text-class-tertiary my-3">
+        {body}
+      </blockquote>
+      <div className="flex flex-row items-center gap-2 text-class-quaternary">
+        <img className="rounded-full" width="24" height="24" alt="" src={img} />
         <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
+          <figcaption className="text-xs font-medium ">
+            {username} | {name}
           </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
+          {/* <p className="text-xs font-medium dark:text-white/40">{username}</p> */}
         </div>
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
     </figure>
   );
 };
