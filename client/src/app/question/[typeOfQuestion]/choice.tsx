@@ -6,13 +6,13 @@ const Choice = () => {
   const [isChoosed, setIsChoosed] = useState("");
 
   return (
-    <div className="flex flex-col gap-3 text-class-tertiary">
+    <div className="flex flex-col gap-3 text-class-primary">
       <div className="flex gap-3 items-center">
         <button
           onClick={() => {
             isChoosed == "A" ? setIsChoosed("") : setIsChoosed("A");
           }}
-          className={` px-4 py-2 rounded-lg  transition-colors ${isChoosed == "A" ? "bg-blue-800 text-class-tertiary hover:bg-blue-950" : "bg-white text-black hover:bg-blue-800 hover:text-class-tertiary"}`}
+          className={` px-4 py-2 rounded-lg  transition-colors ${isChoosed == "A" ? "bg-class-quaternary text-class-primary hover:bg-lime-400" : "bg-white text-black hover:bg-class-quaternary hover:text-class-primary"}`}
         >
           A
         </button>
@@ -23,7 +23,7 @@ const Choice = () => {
           onClick={() => {
             isChoosed == "B" ? setIsChoosed("") : setIsChoosed("B");
           }}
-          className={` px-4 py-2 rounded-lg  transition-colors ${isChoosed == "B" ? "bg-blue-800 text-class-tertiary hover:bg-blue-950" : "bg-white text-black hover:bg-blue-800 hover:text-class-tertiary"}`}
+          className={` px-4 py-2 rounded-lg  transition-colors ${isChoosed == "B" ? "bg-class-quaternary text-class-primary hover:bg-lime-400" : "bg-white text-black hover:bg-class-quaternary hover:text-class-primary"}`}
         >
           B
         </button>
@@ -34,7 +34,7 @@ const Choice = () => {
           onClick={() => {
             isChoosed == "C" ? setIsChoosed("") : setIsChoosed("C");
           }}
-          className={` px-4 py-2 rounded-lg  transition-colors ${isChoosed == "C" ? "bg-blue-800 text-class-tertiary hover:bg-blue-950" : "bg-white text-black hover:bg-blue-800 hover:text-class-tertiary"}`}
+          className={` px-4 py-2 rounded-lg  transition-colors ${isChoosed == "C" ? "bg-class-quaternary text-class-primary hover:bg-lime-400" : "bg-white text-black hover:bg-class-quaternary hover:text-class-primary"}`}
         >
           C
         </button>
@@ -45,7 +45,7 @@ const Choice = () => {
           onClick={() => {
             isChoosed == "D" ? setIsChoosed("") : setIsChoosed("D");
           }}
-          className={` px-4 py-2 rounded-lg  transition-colors ${isChoosed == "D" ? "bg-blue-800 text-class-tertiary hover:bg-blue-950" : "bg-white text-black hover:bg-blue-800 hover:text-class-tertiary"}`}
+          className={` px-4 py-2 rounded-lg  transition-colors ${isChoosed == "D" ? "bg-class-quaternary text-class-primary hover:bg-lime-400" : "bg-white text-black hover:bg-class-quaternary hover:text-class-primary"}`}
         >
           D
         </button>

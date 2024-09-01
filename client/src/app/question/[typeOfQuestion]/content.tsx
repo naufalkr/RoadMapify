@@ -12,9 +12,9 @@ const Content = () => {
     <>
       <div className="flex flex-col max-w-6xl mx-auto gap-10">
         {/* no. */}
-        <p className="text-white text-2xl">{`No. ${page} of ${totalPage}`}</p>
+        <p className="text-class-primary text-2xl">{`No. ${page} of ${totalPage}`}</p>
         {/* Pertanyaan */}
-        <p className="text-white text-3xl">
+        <p className="text-class-primary text-3xl">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia,
           dignissimos suscipit officiis nemo voluptatibus ipsam sit quidem
           fugiat, minus consequatur quas perspiciatis quam fugit veniam non
