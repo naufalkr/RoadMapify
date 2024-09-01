@@ -11,7 +11,7 @@ const TryItButton = () => {
   return (
     <button
       onClick={handle}
-      className="px-4 py-2 bg-black text-white rounded-sm"
+      className="px-6 py-3 bg-class-primary text-white text-sm rounded-lg"
     >
       Try it now!
     </button>

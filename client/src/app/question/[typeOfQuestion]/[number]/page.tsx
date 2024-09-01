@@ -1,6 +1,10 @@
 import Content from "./content";
 
-const QuestionPage = ({ params }: { params: { typeOfQuestion: string } }) => {
+const QuestionPage = ({
+  params,
+}: {
+  params: { typeOfQuestion: string; number: number };
+}) => {
   return (
     <>
       <header>

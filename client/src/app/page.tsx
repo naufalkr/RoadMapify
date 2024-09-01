@@ -1,5 +1,93 @@
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import TryItButton from "./button";
 import Navbar from "./navbar";
+import Link from "next/link";
+import { ArrowUpRightIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
+import Marquee from "@/components/magicui/marquee";
+
+const reviews = [
+  {
+    name: "Jack",
+    username: "@jack",
+    body: "I've never seen anything like this before. It's amazing. I love it.",
+    img: "https://avatar.vercel.sh/jack",
+  },
+  {
+    name: "Jill",
+    username: "@jill",
+    body: "I don't know what to say. I'm speechless. This is amazing.",
+    img: "https://avatar.vercel.sh/jill",
+  },
+  {
+    name: "John",
+    username: "@john",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "https://avatar.vercel.sh/john",
+  },
+  {
+    name: "Jane",
+    username: "@jane",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "https://avatar.vercel.sh/jane",
+  },
+  {
+    name: "Jenny",
+    username: "@jenny",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "https://avatar.vercel.sh/jenny",
+  },
+  {
+    name: "James",
+    username: "@james",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "https://avatar.vercel.sh/james",
+  },
+];
+
+const firstRow = reviews.slice(0, reviews.length / 2);
+const secondRow = reviews.slice(reviews.length / 2);
+
+const ReviewCard = ({
+  img,
+  name,
+  username,
+  body,
+}: {
+  img: string;
+  name: string;
+  username: string;
+  body: string;
+}) => {
+  return (
+    <figure
+      className={cn(
+        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        // light styles
+        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        // dark styles
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+      )}
+    >
+      <div className="flex flex-row items-center gap-2">
+        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <div className="flex flex-col">
+          <figcaption className="text-sm font-medium dark:text-white">
+            {name}
+          </figcaption>
+          <p className="text-xs font-medium dark:text-white/40">{username}</p>
+        </div>
+      </div>
+      <blockquote className="mt-2 text-sm">{body}</blockquote>
+    </figure>
+  );
+};
 
 export default function Home() {
   const images = [
@@ -21,6 +109,33 @@ export default function Home() {
     },
   ];
 
+  const services = [
+    {
+      id: "0",
+      title: "Generate own roadmap using AI",
+      link: "/",
+      image: "",
+    },
+    {
+      id: "1",
+      title: "Class based on your roadmap",
+      link: "/",
+      image: "",
+    },
+    {
+      id: "2",
+      title: "Quiz for all materials",
+      link: "/",
+      image: "",
+    },
+    {
+      id: "3",
+      title: "Beginner Friendly",
+      link: "/",
+      image: "",
+    },
+  ];
+
   return (
     <>
       <header>
@@ -29,24 +144,26 @@ export default function Home() {
       <div>
         {/* try and search lerningpath */}
         <div className="max-w-6xl mx-auto px-5 md:p-0 items-center justify-center">
-          <div className="mt-20 flex flex-col gap-20 ">
+          <div className="mt-10 mb-20 flex flex-col gap-20 ">
             <div className="md:grid md:grid-cols-2">
               {/* Jumbotron */}
               <div className="flex flex-col gap-5">
-                <h1 className="text-5xl text-black font-bold text-start">
+                <p className="text-5xl text-black font-bold text-start">
                   Know your <br />{" "}
-                  <span className="text-yellow-500 font-extrabold">
+                  <span className="text-class-quaternary font-extrabold">
                     Learning Path
                   </span>{" "}
                   more <br />{" "}
-                  <span className="text-emerald-700 font-extrabold">
+                  <span className="text-class-quaternary  font-extrabold">
                     Easily
                   </span>{" "}
                   and{" "}
-                  <span className="text-sky-600 font-extrabold">Precisely</span>
+                  <span className="text-class-quaternary  font-extrabold">
+                    Precisely
+                  </span>
                   .
-                </h1>
-                <p className="text-sm">
+                </p>
+                <p className="">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Harum eius dignissimos ipsam tempora quia. Laboriosam
                   doloribus laborum maiores dolorum, aut dolore commodi non
@@ -57,7 +174,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex border-y-[1px] border-class-secondary px-10 py-5 justify-between">
+            <div className="flex justify-between">
               {images.map((images: any) => (
                 <div key={images.id}>
                   <img
@@ -68,13 +185,97 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <div className="flex flex-col gap-8">
+              <div className="flex jusitfy-start items-center gap-3 w-[100%]">
+                <h2 className="bg-class-quaternary px-1 font-semibold text-2xl">
+                  Services
+                </h2>
+                <p className="text-sm w-[50%]">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Voluptatem autem hic itaque adipisci natus praesentium animi
+                  consequatur dolorum explicabo obcaecati.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+                {services.map((service: any) => (
+                  <Card
+                    key={service.id}
+                    className={`border-2 ${service.id == 1 || service.id == 2 ? "border-class-tertiary bg-class-primary" : "border-class-primary bg-class-tertiary"} rounded-3xl`}
+                  >
+                    <CardHeader></CardHeader>
+                    <CardContent className="grid grid-cols-2">
+                      <div className="flex flex-col gap-8">
+                        <CardTitle
+                          className={`${service.id == 1 || service.id == 2 ? "text-start bg-class-tertiary" : "bg-class-quaternary"} text-class-primary"`}
+                        >
+                          {service.title}
+                        </CardTitle>
+                        <Link
+                          href={service.link}
+                          className="flex items-center gap-2"
+                        >
+                          <ArrowUpRightIcon
+                            size={24}
+                            className={`${service.id == 1 || service.id == 2 ? "text-class-primary bg-class-tertiary" : "text-class-tertiary bg-class-primary"} rounded-full text-white p-1`}
+                          />
+                          <p
+                            className={`${service.id == 1 || service.id == 2 ? "text-class-tertiary " : "text-class-primary "} text-sm`}
+                          >
+                            Read more
+                          </p>
+                        </Link>
+                      </div>
+                      <img src="" alt="" className="h-24 w-auto" />
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
             <div>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Voluptatem autem hic itaque adipisci natus praesentium animi
-                consequatur dolorum explicabo obcaecati. Hic alias ratione eius!
-                Neque molestiae quo itaque deserunt nemo.
-              </p>
+              <Card className="rounded-3xl bg-class-secondary p-3">
+                <CardHeader>
+                  <CardTitle className="text-start text-class-primary">
+                    About Us
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="grid grid-cols-2">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatem autem hic itaque adipisci natus praesentium animi
+                    consequatur dolorum explicabo obcaecati.
+                  </p>
+                  <img src="" alt="" className="h-24 w-auto" />
+                </CardContent>
+                <CardFooter>
+                  <TryItButton />
+                </CardFooter>
+              </Card>
+            </div>
+            <div className="flex flex-col gap-8">
+              <div className="flex jusitfy-start items-center gap-3 w-[100%]">
+                <h2 className="bg-class-quaternary px-1 font-semibold text-2xl">
+                  Reviews
+                </h2>
+                <p className="text-sm w-[50%]">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Voluptatem autem hic itaque adipisci natus praesentium animi
+                  consequatur dolorum explicabo obcaecati.
+                </p>
+              </div>
+              <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+                <Marquee pauseOnHover className="[--duration:20s]">
+                  {firstRow.map((review) => (
+                    <ReviewCard key={review.username} {...review} />
+                  ))}
+                </Marquee>
+                <Marquee reverse pauseOnHover className="[--duration:20s]">
+                  {secondRow.map((review) => (
+                    <ReviewCard key={review.username} {...review} />
+                  ))}
+                </Marquee>
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+              </div>
             </div>
           </div>
         </div>
