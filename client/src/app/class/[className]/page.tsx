@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 import { Progress } from "@/components/ui/progress";
 import ClassNavbar from "./navbar";
 
-const ClassPage = () => {
+const ClassPage = ({ params }: { params: { className: string } }) => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const test = [1, 2, 3, 4, 5];
 
@@ -21,7 +21,7 @@ const ClassPage = () => {
     <>
       <header>
         <ClassNavbar
-          namaMatkul="Nama Matkul"
+          namaMatkul={params.className}
           setIsSidebarCollapsed={setIsSidebarCollapsed}
           isSidebarCollapsed={isSidebarCollapsed}
         />

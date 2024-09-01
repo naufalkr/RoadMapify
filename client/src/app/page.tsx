@@ -9,85 +9,8 @@ import TryItButton from "./button";
 import Navbar from "./navbar";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "lucide-react";
-import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
-
-const reviews = [
-  {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
-  },
-  {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
-  },
-  {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
-  },
-  {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jane",
-  },
-  {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jenny",
-  },
-  {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/james",
-  },
-];
-
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
-
-const ReviewCard = ({
-  img,
-  name,
-  username,
-  body,
-}: {
-  img: string;
-  name: string;
-  username: string;
-  body: string;
-}) => {
-  return (
-    <figure
-      className={cn(
-        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-      )}
-    >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
-        </div>
-      </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
-    </figure>
-  );
-};
+import { ReviewCard } from "./reviewCard";
 
 export default function Home() {
   const images = [
@@ -136,6 +59,48 @@ export default function Home() {
     },
   ];
 
+  const reviews = [
+    {
+      name: "Jack",
+      username: "@jack",
+      body: "I've never seen anything like this before. It's amazing. I love it.",
+      img: "https://avatar.vercel.sh/jack",
+    },
+    {
+      name: "Jill",
+      username: "@jill",
+      body: "I don't know what to say. I'm speechless. This is amazing.",
+      img: "https://avatar.vercel.sh/jill",
+    },
+    {
+      name: "John",
+      username: "@john",
+      body: "I'm at a loss for words. This is amazing. I love it.",
+      img: "https://avatar.vercel.sh/john",
+    },
+    {
+      name: "Jane",
+      username: "@jane",
+      body: "I'm at a loss for words. This is amazing. I love it.",
+      img: "https://avatar.vercel.sh/jane",
+    },
+    {
+      name: "Jenny",
+      username: "@jenny",
+      body: "I'm at a loss for words. This is amazing. I love it.",
+      img: "https://avatar.vercel.sh/jenny",
+    },
+    {
+      name: "James",
+      username: "@james",
+      body: "I'm at a loss for words. This is amazing. I love it.",
+      img: "https://avatar.vercel.sh/james",
+    },
+  ];
+
+  const firstRow = reviews.slice(0, reviews.length / 2);
+  const secondRow = reviews.slice(reviews.length / 2);
+
   return (
     <>
       <header>
@@ -143,7 +108,7 @@ export default function Home() {
       </header>
       <div>
         {/* try and search lerningpath */}
-        <div className="max-w-6xl mx-auto px-5 md:p-0 items-center justify-center">
+        <div className="max-w-6xl mx-auto px-5 sm:px-10 lg:p-0 items-center justify-center">
           <div className="mt-10 mb-20 flex flex-col gap-20 ">
             <div className="md:grid md:grid-cols-2">
               {/* Jumbotron */}
@@ -196,7 +161,7 @@ export default function Home() {
                   consequatur dolorum explicabo obcaecati.
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
                 {services.map((service: any) => (
                   <Card
                     key={service.id}
@@ -216,7 +181,7 @@ export default function Home() {
                         >
                           <ArrowUpRightIcon
                             size={24}
-                            className={`${service.id == 1 || service.id == 2 ? "text-class-primary bg-class-tertiary" : "text-class-tertiary bg-class-primary"} rounded-full text-white p-1`}
+                            className={`${service.id == 1 || service.id == 2 ? "text-class-primary bg-class-tertiary" : "text-class-tertiary bg-class-primary"} rounded-full p-1`}
                           />
                           <p
                             className={`${service.id == 1 || service.id == 2 ? "text-class-tertiary " : "text-class-primary "} text-sm`}
@@ -262,7 +227,7 @@ export default function Home() {
                   consequatur dolorum explicabo obcaecati.
                 </p>
               </div>
-              <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+              <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background ">
                 <Marquee pauseOnHover className="[--duration:20s]">
                   {firstRow.map((review) => (
                     <ReviewCard key={review.username} {...review} />

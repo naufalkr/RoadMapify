@@ -34,13 +34,13 @@ const Navbar = () => {
           <div className="flex items-center jusitfy-between gap-3 text-sm">
             <Link
               href={"/"}
-              className="px-5 py-3 border-[1px] border-[#191919] text-[#191919] bg-white hover:bg-black hover:text-white"
+              className="px-5 py-3 border-[1px] border-[#191919] text-[#191919] bg-white hover:bg-black hover:text-white rounded-xl"
             >
               Masuk
             </Link>
             <Link
               href={"/"}
-              className="px-5 py-3 border-[1px] border-[#191919] text-white bg-[#191919] hover:bg-black"
+              className="px-5 py-3 border-[1px] border-[#191919] text-white bg-[#191919] hover:bg-black rounded-xl"
             >
               Daftar
             </Link>
